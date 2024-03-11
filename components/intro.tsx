@@ -7,10 +7,12 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
 import Link from 'next/link';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Intro() {
+    const { ref } = useSectionInView("Home");
     return (
-        <section className="mb-28 max-w-[50rem] text-center scroll-mt-[100rem]" id="home">
+        <section ref={ref} className="mb-28 max-w-[50rem] text-center scroll-mt-[100rem]" id="home">
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <motion.div
